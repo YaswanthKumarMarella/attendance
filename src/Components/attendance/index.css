@@ -92,3 +92,7 @@
     border: 0px;
     border-radius: 10px;
   }
+
+  .ok{
+    color:red;
+  }
