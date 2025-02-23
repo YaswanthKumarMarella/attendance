@@ -1,0 +1,113 @@
+.bg-home{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.uploadH1{
+    margin: 0px;
+}
+
+.main-div{
+    height: 98%;
+    width: 99%;
+}
+
+.upload-div{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.upload-space{
+    height: 60%;
+    max-width: 500px;
+    padding: 10px;
+    width: 50%;
+    background-color: white;
+    border-radius: 30px;
+    border: 3px dotted white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:576px){
+    .upload-space{
+        height: 40%;
+        max-width: 500px;
+        padding: 10px;
+        width: 50%;
+        background-color: white;
+        border-radius: 30px;
+        border: 3px dotted white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.file-input{
+    font-size: 25px;
+    background-color: white;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.file-upload-container {
+    border: 2px dashed #ccc;
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    margin: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-upload-container:hover {
+    background-color: #f9f9f9;
+}
+
+.browse-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #00aaff;
+    color: #00aaff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width:576px){
+    .browse-button{
+        display: inline-block;
+        padding:5px;
+        border: 1px solid #00aaff;
+        color: #00aaff;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 15px;
+        min-height: 40px;
+        max-height: fit-content;
+        width: 80px;
+        
+    }
+}
+
+.file-list {
+    margin-top: 20px;
+}

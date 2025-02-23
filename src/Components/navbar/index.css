@@ -1,0 +1,52 @@
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: #5763a5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.navH1{
+    margin: 0px;
+    color:white;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-left: 2%;
+    text-decoration:none ;
+}
+
+.nav-text{
+    font-size: 20px;
+    margin-left: 40px;
+    
+}
+
+
+.route-div{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    text-decoration: none;
+
+}
+
+@media  (max-width:576px){
+    .navH1{
+        font-size: 15px;
+        margin-left: 20px;
+        
+    }
+
+    .nav-text{
+        font-size: 15px;
+
+        
+    }
+
+
+}
