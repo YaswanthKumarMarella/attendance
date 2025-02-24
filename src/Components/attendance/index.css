@@ -91,8 +91,55 @@
     padding: 10px;
     border: 0px;
     border-radius: 10px;
+    margin-right: 10px;
   }
 
   .ok{
     color:red;
+  }
+
+  .oneCard2 {
+    width: 100%;
+    height: fit-content;
+    min-height: 35px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    
+  }
+  
+  .c4Search {
+    width: 200px;
+    margin: 0px;
+    margin-right: 40px;
+    border-radius: 10px;
+  }
+
+  .imgLogin {
+    height: 15px;
+    width: 15px;
+    margin: 10px;
+  }
+  
+  .img2 {
+    height: 10px;
+    width: 10px;
+  }
+
+  .loginTextBox {
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    border-left: 1px solid #b6c3ca;
+    padding: 5px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .ltb2 {
+    height: 30px;
   }

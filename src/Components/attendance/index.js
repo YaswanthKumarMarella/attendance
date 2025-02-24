@@ -4,6 +4,7 @@ const Attendance = () =>{
   const [students, setStudents] = useState([]);
   const [updatedList, setUpdatedList] = useState([])
   const [selectedList, setSelectedList] = useState([])
+  const [searchInput, setSearchInput] = useState()
 
   useEffect(() => {
       const storedStudents = localStorage.getItem("students");
@@ -44,12 +45,35 @@ const Attendance = () =>{
     setUpdatedList(students)
   }
 
+  const updateSearch = (event) => {
+    const newSearchValue = event.target.value.toLowerCase();
+    setSearchInput(newSearchValue);
+    setUpdatedList(
+        students.filter(each => 
+            each.name && each.name.toLowerCase().includes(newSearchValue)
+        )
+    );
+};
+
   
       return (
         <div className="table-container">
           <div className='viewsDiv'>
             <h2 className="table-title">Student List</h2>
             <div className='allSelectedDiv'>
+              <div className=" oneCard2 c4Search">
+                  <img
+                    className="imgLogin img2"
+                    src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
+                    alt="search"
+                  />
+                  <input
+                    type="search"
+                    className="loginTextBox ltb2"
+                    placeholder="Search"
+                    onChange={updateSearch}
+                  />
+                </div>
               <p onClick={onViewAll} className='allSelectedText'>View all</p>
               <p onClick={onViewSelected} className='allSelectedText'>View Selected</p>
             </div>
