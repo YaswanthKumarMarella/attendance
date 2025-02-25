@@ -15,7 +15,7 @@ def upload_file():
         return jsonify({'error': 'No selected file'}), 400
 
     try:
-        df = pd.read_excel(file)  # Read Excel file
+        df = pd.read_excel(file, engine="openpyxl")  # Read Excel file
         data = df.to_dict(orient='records')  # Convert to JSON-friendly format
         return jsonify({'data': data})  # Send JSON response
 

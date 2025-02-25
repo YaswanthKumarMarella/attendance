@@ -1,10 +1,12 @@
 import { useState, useEffect, use } from 'react';
+
 import './index.css'
 const Attendance = () =>{
   const [students, setStudents] = useState([]);
   const [updatedList, setUpdatedList] = useState([])
   const [selectedList, setSelectedList] = useState([])
   const [searchInput, setSearchInput] = useState()
+  const [color, setColor] = useState(false)
 
   useEffect(() => {
       const storedStudents = localStorage.getItem("students");
@@ -19,6 +21,7 @@ const Attendance = () =>{
   const onCheck = (event) => {
     const selectedId = Number(event.target.id);  // Convert to number
     const isChecked = event.target.checked;
+    setColor(true)
 
     setSelectedList(prevList => {
         if (isChecked) {
@@ -95,7 +98,7 @@ const Attendance = () =>{
             <tbody>
               {
                 updatedList.map(each=>(
-                  <tr key={each["sNo"]}>
+                  <tr className={selectedList.some(item => item.sNo === each.sNo) ? "selectedBg" : ""} key={each["sNo"]}>
                 <td><input id={each["sNo"]} className='checkbox' type="checkbox" onClick={onCheck} checked={selectedList.some(item => item.sNo === each.sNo)} /></td>
                 <td>{each["sNo"]}</td>
                 <td>{each["registerNumber"]}</td>
